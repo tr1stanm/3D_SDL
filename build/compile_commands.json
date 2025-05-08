@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/Users/tristan/psu25/spring/cs429/code/3D_SDL/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -isystem /usr/local/include -isystem /Library/Frameworks/SDL2.framework/Headers -iframework /Library/Frameworks -isystem /Library/Frameworks/SDL2_image.framework/Headers  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk -mmacosx-version-min=14.6 -F /Library/Frameworks/ -o CMakeFiles/3D_SDL.dir/src/cube.c.o -c /Users/tristan/psu25/spring/cs429/code/3D_SDL/src/cube.c",
+  "file": "/Users/tristan/psu25/spring/cs429/code/3D_SDL/src/cube.c",
+  "output": "CMakeFiles/3D_SDL.dir/src/cube.c.o"
+},
+{
+  "directory": "/Users/tristan/psu25/spring/cs429/code/3D_SDL/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -isystem /usr/local/include -isystem /Library/Frameworks/SDL2.framework/Headers -iframework /Library/Frameworks -isystem /Library/Frameworks/SDL2_image.framework/Headers  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk -mmacosx-version-min=14.6 -F /Library/Frameworks/ -o CMakeFiles/3D_SDL.dir/src/3DRlinalg.c.o -c /Users/tristan/psu25/spring/cs429/code/3D_SDL/src/3DRlinalg.c",
+  "file": "/Users/tristan/psu25/spring/cs429/code/3D_SDL/src/3DRlinalg.c",
+  "output": "CMakeFiles/3D_SDL.dir/src/3DRlinalg.c.o"
+},
+{
+  "directory": "/Users/tristan/psu25/spring/cs429/code/3D_SDL/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -isystem /usr/local/include -isystem /Library/Frameworks/SDL2.framework/Headers -iframework /Library/Frameworks -isystem /Library/Frameworks/SDL2_image.framework/Headers  -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.1.sdk -mmacosx-version-min=14.6 -F /Library/Frameworks/ -o CMakeFiles/3D_SDL.dir/src/gfx.c.o -c /Users/tristan/psu25/spring/cs429/code/3D_SDL/src/gfx.c",
+  "file": "/Users/tristan/psu25/spring/cs429/code/3D_SDL/src/gfx.c",
+  "output": "CMakeFiles/3D_SDL.dir/src/gfx.c.o"
+}
+]
