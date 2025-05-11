@@ -4,8 +4,9 @@
 
 // for cube
 gsl_matrix** initCube(gsl_matrix**, double);
-gsl_matrix** renderCube(gsl_matrix**);
+gsl_matrix** renderCube(gsl_matrix**, gsl_matrix**, int);
 void destroyCube(gsl_matrix**);
+void destroyPointTrace(gsl_matrix**, int);
 
 // for sierpinski
 void renderPoints(double);

@@ -11,7 +11,7 @@ int main() {
 	const int FPS = 60;
 	const double frameDelay = 1000.0/FPS;
 	Uint32 frameStart;
-	int frameTime;
+	double frameTime;
 	int angle = 0;
 
 	init("sierpinski", CANVASSIZE, CANVASSIZE, 0);
