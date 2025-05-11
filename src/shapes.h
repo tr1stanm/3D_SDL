@@ -20,4 +20,4 @@ gsl_matrix* f1_3D(gsl_matrix*);
 gsl_matrix* f2_3D(gsl_matrix*);
 gsl_matrix* f3_3D(gsl_matrix*);
 gsl_matrix* f4_3D(gsl_matrix*);
-gsl_matrix* f5_3D(gsl_matrix*);
+//gsl_matrix* f5_3D(gsl_matrix*);
