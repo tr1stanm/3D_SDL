@@ -6,8 +6,9 @@
 gsl_matrix* matrixMul(gsl_matrix*, gsl_matrix*);
 void printMatrix(gsl_matrix*);
 void plotPoint(gsl_matrix*);
-void plotVector(gsl_matrix*);
+void plotVector(gsl_matrix*, gsl_matrix*);
 gsl_matrix* setPoint(double, double);
+gsl_matrix* set3DPoint(double[3]);
 gsl_matrix* set2DVectorWithMatrices(gsl_matrix*, gsl_matrix*);
 gsl_matrix* set2DVector(double, double, double, double);
 gsl_matrix* set3DVector(double p1[3], double p2[3]);

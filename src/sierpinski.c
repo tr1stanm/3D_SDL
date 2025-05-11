@@ -28,6 +28,7 @@ int main() {
 void renderPoints(double angle) {
 	gsl_matrix *points = gsl_matrix_alloc(4, 1);
 	gsl_matrix *toDraw = gsl_matrix_alloc(3, 1);
+	//for(int i = 0; i < 4; ++i) gsl_matrix_set(points, i, 0, 1);
 	gsl_matrix_set_zero(points);
 	gsl_matrix_set(points, 3, 0, 1);
 	double r;
@@ -47,10 +48,12 @@ void renderPoints(double angle) {
 		gsl_matrix_set(toDraw, 0, 0, gsl_matrix_get(points, 0, 0));
 		gsl_matrix_set(toDraw, 1, 0, gsl_matrix_get(points, 1, 0));
 		gsl_matrix_set(toDraw, 2, 0, gsl_matrix_get(points, 2, 0));
-		gsl_matrix_scale(toDraw, QUADSIZE / 1.25);
+		//gsl_matrix_scale(toDraw, QUADSIZE / 1.25);
 
 		toDraw = rotateX(rotateY(rotateZ(toDraw, angle), angle), angle);
-		gsl_matrix *proj = orthoProject(toDraw);
+		//gsl_matrix *proj = orthoProject(toDraw);
+		gsl_matrix *proj = project(toDraw, 2);
+		gsl_matrix_scale(proj, QUADSIZE / 1.25);
 
 		SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 		plotPoint(proj);

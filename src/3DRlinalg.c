@@ -8,11 +8,16 @@ gsl_matrix* project(gsl_matrix *toProject, double distance) {
 	else if(toProject->size1 == 4) projMatrix = gsl_matrix_alloc(2, 4);
 	else return NULL;
 
-	double constant = 1 / (distance - gsl_matrix_get(toProject, 2, 0));
+	//double constant = 1 / (distance - gsl_matrix_get(toProject, 2, 0));
+	double xp = 1 / (distance - gsl_matrix_get(toProject, 2, 0));
+	double yp = 1 / (distance - gsl_matrix_get(toProject, 2, 0));
+	// this doesn't work with the cube bc it multiplies both points by the 1/z of the first
+	// the cube needs to be represented with points that are 3x1 or 4x1 format
+	// let's keep it 4x1 for now
 
 	gsl_matrix_set_zero(projMatrix);
-	gsl_matrix_set(projMatrix, 0, 0, constant);
-	gsl_matrix_set(projMatrix, 1, 1, constant);
+	gsl_matrix_set(projMatrix, 0, 0, xp);
+	gsl_matrix_set(projMatrix, 1, 1, yp);
 	
 	gsl_matrix* rval = matrixMul(projMatrix, toProject);
 	gsl_matrix_free(projMatrix);
@@ -68,6 +73,14 @@ gsl_matrix* set3DVector(double p1[3], double p2[3]) {
 	gsl_matrix_set(newPt, 0, 1, p2[0]);
 	gsl_matrix_set(newPt, 1, 1, p2[1]);
 	gsl_matrix_set(newPt, 2, 1, p2[2]);
+	return newPt;
+}
+
+gsl_matrix* set3DPoint(double p[3]) {
+	gsl_matrix *newPt = gsl_matrix_alloc(3, 1);
+	gsl_matrix_set(newPt, 0, 0, p[0]);
+	gsl_matrix_set(newPt, 1, 0, p[1]);
+	gsl_matrix_set(newPt, 2, 0, p[2]);
 	return newPt;
 }
 

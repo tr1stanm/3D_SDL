@@ -31,15 +31,18 @@ void plotPoint(gsl_matrix *toPlot) {
 		return;
 	}
 
-	SDL_RenderDrawPoint(renderer, gsl_matrix_get(toPlot, 0, 0) + QUADSIZE, gsl_matrix_get(toPlot, 1, 0) + QUADSIZE);
+	SDL_RenderDrawPoint(renderer, gsl_matrix_get(toPlot, 0, 0) + QUADSIZE,
+			              gsl_matrix_get(toPlot, 1, 0) + QUADSIZE);
 }
 
-void plotVector(gsl_matrix *toPlot) {
-	if(toPlot->size1 != 2 || toPlot->size2 != 2) {
-		printf("error: cannot plot a vector from a non-2x2 matrix.\n");
+void plotVector(gsl_matrix *p1, gsl_matrix* p2) {
+	if(p1->size1 != 2 || p1->size2 != 1 || p2->size1 != 2 || p2->size2 != 1) {
+		printf("error: cannot plot a vector from non-2x1 matrices.\n");
 		return;
 	}
 
-	SDL_RenderDrawLine(renderer, gsl_matrix_get(toPlot, 0, 0) + QUADSIZE, gsl_matrix_get(toPlot, 1, 0) + QUADSIZE,
-	       		             gsl_matrix_get(toPlot, 0, 1) + QUADSIZE, gsl_matrix_get(toPlot, 1, 1) + QUADSIZE);
+	SDL_RenderDrawLine(renderer, gsl_matrix_get(p1, 0, 0) + QUADSIZE, 
+				     gsl_matrix_get(p1, 1, 0) + QUADSIZE,
+	       		             gsl_matrix_get(p2, 0, 0) + QUADSIZE, 
+				     gsl_matrix_get(p2, 1, 0) + QUADSIZE);
 }
