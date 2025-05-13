@@ -9,10 +9,12 @@ void destroyCube(gsl_matrix**);
 void destroyPointTrace(gsl_matrix**, int);
 
 // for sierpinski
-void renderPoints(double);
-gsl_matrix* createPoint(gsl_matrix*);
-gsl_matrix* drawPoint(gsl_matrix*, double);
-void destroyPoints(gsl_matrix**, int); 
+struct TracePoint;
+void renderPoints(struct TracePoint**, double);
+void createPointsTrace(struct TracePoint**, int, gsl_matrix*);
+void renderPointsTraceBehind(struct TracePoint**, int, int);
+void renderPointsTraceFront(struct TracePoint**, int, int);
+void destroyPoints(struct TracePoint**, int); 
 gsl_matrix* f1_2D(gsl_matrix*);
 gsl_matrix* f2_2D(gsl_matrix*);
 gsl_matrix* f3_2D(gsl_matrix*);
@@ -21,4 +23,3 @@ gsl_matrix* f1_3D(gsl_matrix*);
 gsl_matrix* f2_3D(gsl_matrix*);
 gsl_matrix* f3_3D(gsl_matrix*);
 gsl_matrix* f4_3D(gsl_matrix*);
-//gsl_matrix* f5_3D(gsl_matrix*);
